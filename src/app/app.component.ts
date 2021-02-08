@@ -15,7 +15,7 @@ export class AppComponent {
     private elementRef: ElementRef
   ) {}
 
-  public success(): void {
+  public surprise(): void {
 
     const canvas = this.renderer2.createElement('canvas');
 
