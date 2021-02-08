@@ -1,0 +1,22 @@
+button {
+  border: none;
+  padding: 0.5rem;
+  background: #fddde3;
+  color: #8e5d5d;
+  width: 200px;
+  height: 50px;
+  font-size: 21px;
+  box-shadow: 0px 1px 4px 0px #d59d9d;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}

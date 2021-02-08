@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
+import * as confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'confetti-ui';
+
+  public clicked = false;
+
+  constructor(
+    private renderer2: Renderer2,
+    private elementRef: ElementRef
+  ) {}
+
+  public success(): void {
+
+    const canvas = this.renderer2.createElement('canvas');
+
+    this.renderer2.appendChild(this.elementRef.nativeElement, canvas);
+
+    const myConfetti = confetti.create(canvas, {
+      resize: true
+    });
+
+    myConfetti();
+
+    this.clicked = true;
+  }
 }
